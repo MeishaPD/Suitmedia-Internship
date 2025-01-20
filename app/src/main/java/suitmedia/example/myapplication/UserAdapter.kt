@@ -30,6 +30,8 @@ class UserAdapter(
         holder.emailTextView.text = user.email
         Glide.with(holder.itemView.context)
             .load(user.avatar)
+            .centerCrop()
+            .circleCrop()
             .into(holder.avatarImageView)
 
         holder.itemView.setOnClickListener { onItemClick(user) }
